@@ -1,0 +1,44 @@
+/* @override http://localhost:4000/css/main.css */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+p, li {
+	font-size: 12px;
+	line-height: 16px;
+}
+/* @group Layout */
+
+li {
+	padding-left: 1em;
+}
+ul {
+	padding-left: 3em;
+	margin-top: 10px;
+	margin-bottom:  10px;
+}
+#header {
+	
+}
+#content {
+	margin: 0 auto;
+	margin-top: 20px;
+	width:700px;
+	min-height:200px;
+}
+#footer {
+	padding: 10px;
+	margin: 0 auto;
+	margin-top: 20px;
+	min-height:50px;
+	font-size: 10px;
+	text-align: center;
+	background-color: #eaeaea;
+}
+
+/* @end */
+

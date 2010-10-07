@@ -1,0 +1,16 @@
+---
+layout:       default
+body_id:      home
+title:        Data Brewery
+---
+
+Brewery is a framework for managing, analysing and mining data written in Ruby.
+Goal is to provide functions and tools for:
+
+* extraction, transformation and loading of data
+* data quality auditing
+* simple online analytical processing - "OLAP":http://en.wikipedia.org/wiki/Olap
+
+h1. Source
+
+Project souces can be found at "Brewery Github page":http://github.com/Stiivi/brewery
