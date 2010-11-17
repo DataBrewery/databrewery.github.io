@@ -11,6 +11,8 @@ Goal is to provide functions and tools for:
 * data quality auditing
 * simple online analytical processing - "OLAP":http://en.wikipedia.org/wiki/Olap
 
+h1. "Reference Documentation":http://databrewery.org/doc
+
 h1. Source
 
 Project souces can be found at "Brewery Github page":http://github.com/Stiivi/brewery
