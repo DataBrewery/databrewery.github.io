@@ -1,0 +1,241 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="text:Disqus Shortname" content="" />
+
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css">
+    <link rel="stylesheet" href="http://databrewery.org/css/main.css" type="text/css" media="screen, projection" />
+    <link rel="alternate" type="application/rss+xml" title="News and Notes feed" href="/news.rss" />
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="http://databrewery.org/prettify/src/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="http://databrewery.org/prettify/styles/sunburst.css" />
+    <script src="http://databrewery.org/prettify/src/prettify.js"></script>  
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}
+        <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+</head>
+  <body onload="prettyPrint()">
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">Data Brewery</a>
+          <ul class="nav">
+            <li><a href="http://databrewery.org/">Home</a></li>
+            <li class="active"><a href="http://blog.databrewery.org">Blog</a></li>
+            <li><a href="http://databrewery.org/brewery.html">Brewery</a></li>
+            <li><a href="http://databrewery.org/cubes.html">Cubes</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+          <h1>{title}</h1>
+          {block:Description}
+              <p id="description">{Description}</p>
+          {/block:Description}
+        </div>
+        <div class="row">
+          <div class="span10">
+
+              <ul class="unstyled">
+                  {block:Posts}
+                  {block:Date}
+                  <h5 class="permalink date">
+
+                      {block:NewDayDate}
+                        <a title="{NoteCountWithLabel}"
+                          href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a>
+                      {/block:NewDayDate}
+
+                      {block:IfNotDisqusShortName}
+                      {block:IfNotShowTheNumberOfPostNotes}
+                        {block:SameDayDate}
+                        <a title="{NoteCountWithLabel}"
+                          href="{Permalink}">&rarr;</a>
+                        {/block:SameDayDate}
+                      {/block:IfNotShowTheNumberOfPostNotes}
+                      {/block:IfNotDisqusShortName}
+
+                      {block:IfShowTheNumberOfPostNotes}
+                        <a href="{Permalink}">{NoteCountWithLabel}</a>
+                      {/block:IfShowTheNumberOfPostNotes}
+
+                      {block:IfDisqusShortname}
+                        <a title="{NoteCountWithLabel}"
+                          href="{Permalink}#disqus_thread"></a>
+                      {/block:IfDisqusShortname}
+
+                  </h5>
+                  {/block:Date}
+
+                      {block:Text}
+                          <li class="post text">
+                              {block:Title}
+                                  <h1><a href="{Permalink}">{Title}</a></h1>
+                              {/block:Title}
+
+                              {Body}
+                          </li>
+                      {/block:Text}
+
+                      {block:Photo}
+                          <li class="post photo">
+                              <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                              {block:Caption}
+                                  <div class="caption">{Caption}</div>
+                              {/block:Caption}
+                          </li>
+                      {/block:Photo}
+
+                      {block:Photoset}
+                          <li class="post photoset">
+                              {Photoset-500}
+
+                              {block:Caption}
+                                  <div class="caption">{Caption}</div>
+                              {/block:Caption}
+                          </li>
+                      {/block:Photoset}
+
+                      {block:Quote}
+                          <li class="post quote">
+                              "{Quote}"
+
+                              {block:Source}
+                                  <div class="source">{Source}</div>
+                              {/block:Source}
+                          </li>
+                      {/block:Quote}
+
+                      {block:Link}
+                          <li class="post link">
+                              <h1><a href="{URL}" class="link" {Target}><img src="http://databrewery.org/images/link_24x24.png" /> {Name}</a></h1>
+
+                              {block:Description}
+                                  <div class="description">{Description}</div>
+                              {/block:Description}
+                          </li>
+                      {/block:Link}
+
+                      {block:Chat}
+                          <li class="post chat">
+                              {block:Title}
+                                  <h3><a href="{Permalink}">{Title}</a></h3>
+                              {/block:Title}
+
+                              <ul class="chat">
+                                  {block:Lines}
+                                      <li class="{Alt} user_{UserNumber}">
+                                          {block:Label}
+                                              <span class="label">{Label}</span>
+                                          {/block:Label}
+
+                                          {Line}
+                                      </li>
+                                  {/block:Lines}
+                              </ul>
+                          </li>
+                      {/block:Chat}
+
+                      {block:Video}
+                          <li class="post video">
+                              {Video-500}
+
+                              {block:Caption}
+                                  <div class="caption">{Caption}</div>
+                              {/block:Caption}
+                          </li>
+                      {/block:Video}
+
+                      {block:Audio}
+                          <li class="post audio">
+                              {AudioPlayerBlack}
+
+                              {block:Caption}
+                                  <div class="caption">{Caption}</div>
+                              {/block:Caption}
+                          </li>
+                      {/block:Audio}
+
+                      {block:Permalink}
+                      {block:IfDisqusShortname}
+                      <div id="disqus_thread"></div>
+                      <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                      <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                      {/block:IfDisqusShortname}
+                      {/block:Permalink}
+
+                    <div class="sharing">
+                    <g:plusone href="{Permalink}"></g:plusone>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="{Permalink}" data-count="none" data-via="Stiivi">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>                    
+                    </div>
+
+                  {/block:Posts}
+              </ul>
+
+
+              <p id="footer">
+                  {block:PreviousPage}
+                      <a href="{PreviousPage}">&#171; Previous</a>
+                  {/block:PreviousPage}
+
+                  {block:NextPage}
+                      <a href="{NextPage}">Next &#187;</a>
+                  {/block:NextPage}
+
+                  <a href="/archive">Archive</a>
+              </p>
+
+          </div>
+          <div class="span4">
+            <ul class="unstyled">
+               <li><a href="{RSS}"><img src="http://databrewery.org/images/rss_16x16.png" /> RSS</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; <a href="http://stiivi.com">Stefan Urbanek</a> 2010-2011</p>
+        <p><a href="credits.html">Credits</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    {block:IfDisqusShortname}
+    <script type="text/javascript">
+      //<![CDATA[
+      (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+          if(links[i].href.indexOf('#disqus_thread') >= 0) {
+            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+          }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+      })();
+    //]]>
+    </script>
+    {/block:IfDisqusShortname}
+
+  </body>
+
+</html>

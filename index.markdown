@@ -18,7 +18,7 @@ data analysis and quality measurement
 <div class="span5">
 
 <h1>Cubes</h1>
-<p>online analytical procedssing (OLAP)
+<p>online analytical processing (OLAP)
 <img src="images/cubes-image.png" height="100px"/>
 </p>
 <a class="btn" href="cubes.html">View details &raquo;</a>
