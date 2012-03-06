@@ -10,7 +10,7 @@ links:
         icon: info_8x16.png
     -
         title: Sources at github
-        url: https://github.com/stiivi/brewery
+        url: https://github.com/stiivi/cubes
         icon: github_favicon.ico
     - 
         title: Google Group (mailing list)
@@ -42,3 +42,5 @@ Introduction:
 <div>
 <iframe src="http://www.slideshare.net/slideshow/embed_code/7781602?rel=0" width="340" height="284" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">&nbsp;</iframe>
 </div>
+
+IRC channel: #databrewery on freenode.net.
