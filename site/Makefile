@@ -14,15 +14,6 @@ $(LAYOUT_FILES): $(GLOBAL_LAYOUT)
 	@echo Copying layout file $@
 	@cp $< $@
 
-content:
-	for project in $(PROJECTS); do \
-		pushd . ; \
-		cd $(project) ; \
-		echo making $(project) ; \
-		pwd ; \
-		popd ; \
-	done
-
 $(PROJECTS):
 	@echo Creating content for $@... ; \
 	cd $@ ; \
