@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+	<div class = "row content">
+
+				<div class = "span8 articles">
+
+					{% for article in articles_page.object_list %}
+						<article>
+							<span>
+								<i>{{ article.date }}</i><br>
+								by <strong>{{ article.author }}</strong>
+							</span>
+
+							<h1><a href = "{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+
+							{{ article.content }}
+
+						</article>
+					{% endfor %}
+
+					{% if DEFAULT_PAGINATION %}
+						<p class = "pagination">
+
+							
+
+						{% if articles_page.has_previous() %}
+					        {% if articles_page.previous_page_number() == 1 %}
+					            <a href="{{ SITEURL }}/{{ page_name }}.html">Previous Page</a>
+					        {% else %}
+					            <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html">Previous Page</a>
+					        {% endif %}
+
+					    {% if articles_page.has_next() %}
+					     | 
+					    {% endif %}
+
+					    {% endif %}
+
+
+
+					    {% if articles_page.has_next() %}
+					        <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">Next Page</a>
+					    {% endif %}
+
+					   </p>
+				    {% endif %}
+
+
+				</div>
+
+				<div class = "span2 offset2 tags">
+					<h2>Tags</h2>
+					<ul>
+						{% for tag, null in tags %}
+						<li><a href ="{{ SITEURL }}/{{ tag.url }}">{{tag}}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+
+
+	</div>
+
+{% endblock %}

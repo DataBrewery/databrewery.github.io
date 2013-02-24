@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+	<div class = "row content">
+
+				<div class = "span8 articles">
+
+						<article>
+							<span>
+								<i>{{ article.date }}</i><br>
+								by <strong>{{ article.author }}</strong>
+							</span>
+
+							<h1>{{ article.title }}</h1>
+
+							{{ article.content }}
+
+						</article>
+
+				</div>
+
+				<!--
+				<div class = "span2 offset2 tags">
+					<h2>Tags</h2>
+					<ul>
+						{% for tag, null in tags %}
+						<li><a href ="{{ SITEURL }}/{{ tag.url }}">{{tag}}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+				-->
+
+	</div>
+
+{% endblock %}
