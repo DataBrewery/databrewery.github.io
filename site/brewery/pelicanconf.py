@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+import sys
 
 AUTHOR = u'Andrej Sýkora'
 SITENAME = u'Brewery | Data Brewery'
@@ -46,3 +47,8 @@ LINKS =  False
 SOCIAL = False
 
 DEFAULT_PAGINATION = False
+
+PLUGIN_PATH = '../plugins'
+PLUGINS = ['textbox']
+sys.path.insert(0, PLUGIN_PATH)
+
