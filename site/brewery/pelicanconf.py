@@ -32,8 +32,9 @@ CATEGORIES_SAVE_AS = False
 
 # THEME
 
-THEME = './theme'
-THEME_STATIC_PATHS = []
+THEME = '../_global/theme'
+THEME_STATIC_PATHS = ['static']
+EXTRA_TEMPLATES_PATHS=['theme/templates']
 
 # OUTPUT
 

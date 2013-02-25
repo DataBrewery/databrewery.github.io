@@ -8,7 +8,11 @@ def generate_textboxes(generator):
         if "textbox" not in page.metadata:
             continue
         box = page.metadata["textbox"]
-        boxes[page.metadata["slug"]][box] = page
+        row = page.metadata["row"]
+        parent = page.metadata["parent"]
+        if row not in boxes[parent]:
+            boxes[parent][row] = defaultdict(dict)
+        boxes[parent][row][box] = page
 
     # Assign pages to boxes
     for page in generator.pages:
@@ -16,6 +20,7 @@ def generate_textboxes(generator):
             continue
         slug = page.metadata["slug"]
         page.metadata["textboxes"] = boxes.get(slug, {})
+        print page.metadata["textboxes"]
 
 def register():
     signals.pages_generator_finalized.connect(generate_textboxes)

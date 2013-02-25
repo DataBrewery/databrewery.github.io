@@ -30,8 +30,9 @@ DEFAULT_PAGINATION = 5
 
 # THEME
 
-THEME = './theme'
-THEME_STATIC_PATHS = []
+THEME = '../_global/theme'
+THEME_STATIC_PATHS = ['static']
+EXTRA_TEMPLATES_PATHS=['theme/templates']
 
 # OUTPUT
 
@@ -46,7 +47,7 @@ SOCIAL = False
 
 DEFAULT_PAGINATION = False
 
-PLUGIN_PATH = '../plugins'
-PLUGINS = ['textbox']
-sys.path.insert(0, PLUGIN_PATH)
+#PLUGIN_PATH = '../plugins'
+#PLUGINS = ['textbox']
+#sys.path.insert(0, PLUGIN_PATH)
 

@@ -9,11 +9,11 @@
 			<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
 
 			<!-- DEFAULT STYLES -->
-			<link rel = "stylesheet" href = "{{ SITEURL }}/../static/css/bootstrap.min.css">
-			<link rel = "stylesheet/less" href = "{{ SITEURL }}/../static/css/default.less">
+			<link rel = "stylesheet" href = "{{ SITEURL }}/theme/css/bootstrap.min.css">
+			<link rel = "stylesheet/less" href = "{{ SITEURL }}/theme/css/default.less">
 
 			<!-- LESS PROCEESSING -->
-			<script src = "{{ SITEURL }}/../static/js/vendor/less.min.js"></script>
+			<script src = "{{ SITEURL }}/theme/js/vendor/less.min.js"></script>
 
 	        {% if FEED_ALL_ATOM %}
 	        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
@@ -54,7 +54,7 @@
 
 					<h1 class = "logo">
 						{% block logo %}
-						<img src = "{{ SITEURL }}/../static/img/logo_cubes_4.png" width = "200px">
+						<img src = "{{ SITEURL }}/theme/static/img/logo_cubes_4.png" width = "200px">
 						{% endblock logo %}
 					</h1>
 
@@ -99,9 +99,9 @@
 		</div>
 
 		{% block scripts %}
-			<script src = "{{ SITEURL }}/../static/js/vendor/jquery.min.js"></script>
-			<script src = "{{ SITEURL }}/../static/js/vendor/bootstrap.min.js"></script>
-			<script src = "{{ SITEURL }}/../static/js/dist/effects.js"></script>
+			<script src = "{{ SITEURL }}/theme/static/js/vendor/jquery.min.js"></script>
+			<script src = "{{ SITEURL }}/theme/static/js/vendor/bootstrap.min.js"></script>
+			<script src = "{{ SITEURL }}/theme/static/js/dist/effects.js"></script>
 		{% endblock scripts %}
 
 	</body>
