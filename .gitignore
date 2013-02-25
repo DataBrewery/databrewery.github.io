@@ -1,1 +1,11 @@
-_site
+*.py[cod]
+
+# Packages
+*.egg
+*.egg-info
+tmp
+
+# Other
+*.swp
+.vim
+
