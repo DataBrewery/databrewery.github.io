@@ -2,6 +2,7 @@ Title: bogus 2
 TextBox: box_highlight
 Row: 1
 Type: full
+Class: highlight
 Parent: overview
 Status: hidden
 

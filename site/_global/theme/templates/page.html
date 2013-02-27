@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+{% for row in page.metadata.textboxes %}
+
+	<div class = "row content">
+
+		{% for box in page.metadata.textboxes[row] %}
+
+			<div class = "{% if page.metadata.textboxes[row][box].metadata['type'] == 'full' %}span12{% else %}span5{% endif %} {{ page.metadata.textboxes[row][box].metadata['class'] }}">
+				{{ page.metadata.textboxes[row][box].content }}
+			</div>
+
+		{% endfor %}
+
+	</div>
+
+{% endfor %}
+
+{% endblock main %}
