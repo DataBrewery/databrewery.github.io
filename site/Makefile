@@ -1,4 +1,4 @@
-PROJECTS := cubes brewery blog
+PROJECTS := home cubes brewery blog
 
 .PHONY: all $(PROJECTS)
 

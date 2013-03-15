@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block sitestyle %}intro{% endblock %}
+{% block navigation %}{% endblock navigation %}
+{% block main %}
+
+<div class = "row">
+
+	<div class = "span12 header">
+
+		<img src = "{{SITEURL}}/static/images/logo_databrewery.png" alt = "Data Brewery logo" width = "500px">
+
+		<h1>Data Brewery</h1>
+
+		<p>
+			Data Brewery is a set of <a href = "http://python.org">Python</a> frameworks with tools for data analysis.
+		</p>
+
+	</div>
+
+</div>
+
+<div class = "row boxes">
+
+	<div class = "span4 box" onclick = "window.location='./cubes/overview.html';">
+
+		<img src = "{{SITEURL}}/static/images/logo_cubes.png" alt = "Cubes logo" width = "80%">
+
+		<p>
+			Aggregated data browsing, reporting and multidimensional modeling. Contains set of tools, OLAP HTTP server and light-weight Python framework.
+		</p>
+
+		<p class = "links">
+			<a href = "./cubes/overview.html">Overview</a>
+			<a href = "./cubes/overview.html">Download</a>
+			<a href = "./cubes/documentation.html">Documentation</a>
+			<a href = "./cubes/overview.html">Models</a>
+			<a href = "./cubes/overview.html">Extensions</a>
+		</p>
+
+	</div>
+
+	<div class = "span4 box" onclick = "window.location='./brewery/overview.html';">
+
+		<img src = "{{SITEURL}}/static/images/logo_brewery.png" alt = "Brewery logo" width = "90%">
+
+		<p>
+			Flow based data processing with 
+			support for variety of data 
+			sources, data targets. Suitable for 
+			extraction, transformation and 
+			loading (ETL) as well as data 
+			auditing and data quality 
+			monitoring.
+		</p>
+
+		<p class = "links">
+			<a href = "./brewery/overview.html">Overview</a>
+			<a href = "./brewery/overview.html">Download</a>
+			<a href = "./brewery/documentation.html">Documentation</a>
+			<a href = "./brewery/overview.html">Examples</a>
+		</p>
+
+	</div>
+
+	<div class = "span4 box" onclick = "window.location='./blog/';">
+
+		<img src = "{{SITEURL}}/static/images/logo_blog.png" alt = "Blog logo" width="60%">
+
+		<p>
+			How-to's, news updates and various data talks.
+		</p>
+
+	</div>
+
+</div>
+
+
+{% endblock main %}
