@@ -53,9 +53,13 @@
 				<div class = "span3">
 
 					<h1 class = "logo">
-						{% block logo %}
-						<img src = "{{ SITEURL }}/theme/static/img/logo_cubes_4.png" width = "200px">
-						{% endblock logo %}
+
+							{% block logo %}
+								<a href = "{{ SITEURL }}">
+									<img src = "{{ SITEURL }}/theme/static/img/logo_cubes_4.png" width = "200px">
+								</a>
+							{% endblock logo %}
+	
 					</h1>
 
 				</div>
@@ -96,7 +100,7 @@
 						Design by
 						<a href="http://andrejsykora.com">Andrej Sykora</a>.
 						Website generation by
-						<a href="http://docs.getpelican.com">Pelican</a>.
+						<a href="http://docs.getpelican.com">Pelican</a>. Part of <a href = "http://databrewery.org">DataBrewery</a>.
 					</p>
 
 				</div>

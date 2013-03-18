@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog | Data Brewery</title><link href="/" rel="alternate"></link><link href="/feeds/lol.atom.xml" rel="self"></link><id>/</id><updated>2010-12-03T00:00:00+01:00</updated><entry><title>Rye Catchers</title><link href="/rye-catchers.html" rel="alternate"></link><updated>2010-12-03T00:00:00+01:00</updated><author><name>Andrej Sýkora</name></author><id>tag:,2010-12-03:rye-catchers.html</id><summary type="html">&lt;p&gt;This is an article about catchig rye.&lt;/p&gt;
-&lt;p&gt;It's very cool. It can do lists, too:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;One.&lt;/li&gt;
-&lt;li&gt;Two.&lt;/li&gt;
-&lt;li&gt;Three.&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="rye"></category><category term="catching"></category><category term="melancholy"></category></entry></feed>

@@ -45,8 +45,6 @@ LINKS =  False
 # Social widget
 SOCIAL = False
 
-DEFAULT_PAGINATION = False
-
 #PLUGIN_PATH = '../plugins'
 #PLUGINS = ['textbox']
 #sys.path.insert(0, PLUGIN_PATH)

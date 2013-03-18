@@ -1,0 +1,185 @@
+Title: Star Browser, Part 1: Mappings
+Date: 2012-04-30
+Tags: cubes, sql
+Category: cubes
+Slug: star-browser-1-mappings
+Author: Stefan Urbanek
+Summary: Star Browser, Part 1: Mappings
+
+<p>Star Browser is new aggregation browser in for the
+<a href="https://github.com/Stiivi/cubes">Cubes</a> – lightweight Python OLAP Framework.
+I am going to talk briefly about current state and why new browser is needed.
+Then I will describe in more details the new browser: how mappings work, how
+tables are joined. At the end I will mention what will be added soon and what
+is planned in the future.</p>
+
+<p>Originally I wanted to write one blog post about this, but it was too long, so
+I am going to split it into three:</p>
+
+<ul><li>mappings (this one)</li>
+<li><a href="http://blog.databrewery.org/post/22214335636">joins and denormalization</a></li>
+<li><a href="http://blog.databrewery.org/post/22904157693">aggregations and new features</a></li>
+</ul><h1>Why new browser?</h1>
+
+<p>Current <a href="https://github.com/Stiivi/cubes/blob/master/cubes/backends/sql/browser.py">denormalized
+browser</a>
+is good, but not good enough. Firstly, it has grown into a spaghetti-like
+structure inside and adding new features is quite difficult. Secondly, it is
+not immediately clear what is going on inside and not only new users are
+getting into troubles. For example the mapping of logical to physical is not
+obvious; denormalization is forced to be used, which is good at the end, but
+is making OLAP newbies puzzled.</p>
+
+<p>The new browser, called
+<a href="https://github.com/Stiivi/cubes/blob/master/cubes/backends/sql/star.py">StarBrowser</a>.
+is half-ready and will fix many of the old decisions with better ones.</p>
+
+<h1>Mapping</h1>
+
+<p>Cubes provides an analyst&#8217;s view of dimensions and their attributes by hiding
+the physical representation of data. One of the most important parts of proper
+OLAP on top of the relational database is the mapping of physical attributes
+to logical.</p>
+
+<p>First thing that was implemented in the new browser is proper mapping of
+logical attributes to physical table columns. For example, take a reference to
+an attribute <em>name</em> in a dimension <em>product</em>. What is the column of what table
+in which schema that contains the value of this dimension attribute?</p>
+
+<p><img src="http://media.tumblr.com/tumblr_m3ajdppDAa1qgmvbu.png" alt=""/></p>
+
+<p>There are two ways how the mapping is being done: implicit and explicit. The
+simplest, straightforward and most customizable is the explicit way, where the
+actual column reference is provided in the model description:</p>
+
+<pre class="prettyprint">
+"mappings": {
+    "product.name": "dm_products.product_name"
+}
+</pre>
+
+<p>If it is in different schema or any part of the reference contains a dot:</p>
+
+<pre class="prettyprint">
+"mappings": {
+    "product.name": {
+            "schema": "sales",
+            "table": "dm_products",
+            "column": "product_name"
+        }
+}
+</pre>
+
+<p>Disadvantage of the explicit way is it&#8217;s verbosity and the fact that developer
+has to write more metadata, obviously.</p>
+
+<p>Both, explicit and implicit mappings have ability to specify default database
+schema (if you are using Oracle, PostgreSQL or any other DB which supports
+schemas).</p>
+
+<p>The mapping process process is like this:</p>
+
+<p><img src="http://media.tumblr.com/tumblr_m3akrsmX9b1qgmvbu.png" alt=""/></p>
+
+<h2>Implicit Mapping</h2>
+
+<p>With implicit mapping one can match a database schema with logical model and
+does not have to specify additional mapping metadata. Expected structure is
+star schema with one table per (denormalized) dimension.</p>
+
+<p>Basic rules:</p>
+
+<ul><li>fact table should have same name as represented cube</li>
+<li>dimension table should have same name as the represented dimension, for
+example: <code>product</code> (singular)</li>
+<li>references without dimension name in them are expected to be in the fact
+table, for example: <code>amount</code>, <code>discount</code> (see note below for simple flat
+dimensions)</li>
+<li>column name should have same name as dimension attribute: <code>name</code>, <code>code</code>,
+<code>description</code></li>
+<li>if attribute is localized, then there should be one column per localization
+and should have locale suffix: <code>description_en</code>, <code>description_sk</code>,
+<code>description_fr</code> (see below for more information)</li>
+</ul><p>This means, that by default <code>product.name</code> is mapped to the table <code>product</code>
+and column <code>name</code>. Measure <code>amount</code> is mapped to the table <code>sales</code> and column
+<code>amount</code></p>
+
+<p>What about dimensions that have only one attribute, like one would not have a
+full date but just a <code>year</code>? In this case it is kept in the fact table without
+need of separate dimension table. The attribute is treated in by the same rule
+as measure and is referenced by simple <code>year</code>. This is applied to all
+dimensions that have only one attribute (representing key as well). This
+dimension is referred to as <em>flat and without details</em>.</p>
+
+<p>Note for advanced users: this behavior can be disabled by setting
+<code>simplify_dimension_references</code> to <code>False</code> in the mapper. In that case you
+will have to have separate table for the dimension attribute and you will have
+to reference the attribute by full name. This might be useful when you know
+that your dimension will be more detailed.</p>
+
+<h2>Localization</h2>
+
+<p>Despite localization taking place first in the mapping process, we talk about
+it at the end, as it might be not so commonly used feature. From physical
+point of view, the data localization is very trivial and requires language
+denormalization - that means that each language has to have its own column for
+each attribute.</p>
+
+<p>In the logical model, some of the attributes may contain list of locales that
+are provided for the attribute. For example product category can be in
+English, Slovak or German. It is specified in the model like this:</p>
+
+<pre class="prettyprint">
+attributes = [{
+    "name" = "category",
+    "locales" = [en, sk, de],
+}]
+</pre>
+
+<p>During the mapping process, localized logical reference is created first:</p>
+
+<p><img src="http://media.tumblr.com/tumblr_m3aksf89Zb1qgmvbu.png" alt=""/></p>
+
+<p>In short: if attribute is localizable and locale is requested, then locale
+suffix is added. If no such localization exists then default locale is used.
+Nothing happens to non-localizable attributes.</p>
+
+<p>For such attribute, three columns should exist in the physical model. There
+are two ways how the columns should be named. They should have attribute name
+with locale suffix such as <code>category_sk</code> and <code>category_en</code> (<em>underscore</em>
+because it is more common in table column names), if implicit mapping is used.
+You can name the columns as you like, but you have to provide explicit mapping
+in the mapping dictionary. The key for the localized logical attribute should
+have <code>.locale</code> suffix, such as <code>product.category.sk</code> for Slovak version of
+category attribute of dimension product. Here the <em>dot</em> is used because dots
+separate logical reference parts.</p>
+
+<h2>Customization of the Implicit</h2>
+
+<p>The implicit mapping process has a little bit of customization as well:</p>
+
+<ul><li><em>dimension table prefix</em>: you can specify what prefix will be used for all
+dimension tables. For example if the prefix is <code>dim_</code> and attribute is
+<code>product.name</code> then the table is going to be <code>dim_product</code>.</li>
+<li><em>fact table prefix</em>: used for constructing fact table name from cube name.
+Example: having prefix <code>ft_</code> all fact attributes of cube <code>sales</code> are going
+to be looked up in table <code>ft_sales</code></li>
+<li><em>fact table name</em>: one can explicitly specify fact table name for each cube
+separately</li>
+</ul><h1>The Big Picture</h1>
+
+<p>Here is the whole mapping schema, after localization:</p>
+
+<p><img src="http://media.tumblr.com/tumblr_m3akttdCmK1qgmvbu.png" alt=""/></p>
+
+<h1>Links</h1>
+
+<p>The commented mapper source is
+<a href="https://github.com/Stiivi/cubes/blob/master/cubes/backends/sql/mapper.py">here</a>.</p>
+
+<ul><li><a href="https://github.com/Stiivi/cubes">github sources</a></li>
+<li><a href="http://packages.python.org/cubes/">Documentation</a></li>
+<li><a href="http://groups.google.com/group/cubes-discuss/">Mailing List</a></li>
+<li><a href="https://github.com/Stiivi/cubes/issues">Submit issues</a></li>
+<li>IRC channel <a href="irc://irc.freenode.net/#databrewery">#databrewery</a> on irc.freenode.net</li>
+</ul>

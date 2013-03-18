@@ -9,3 +9,6 @@ tmp
 *.swp
 .vim
 
+# Prod dir
+prod
+

@@ -52,3 +52,9 @@ SOCIAL = False
 
 DEFAULT_PAGINATION = False
 FEED_DOMAIN = "http://databrewery.org"
+
+# CUSTOM
+
+ROOT_CUBES = "http://cubes.databrewery.org"
+ROOT_BREWERY = "http://brewery.databrewery.org"
+ROOT_BLOG = "http://blog.databrewery.org"
