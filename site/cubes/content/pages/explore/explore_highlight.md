@@ -6,5 +6,6 @@ Class: highlight
 Parent: explore
 Status: hidden
 
-# Explore #
+# Model and Explore #
 
+Cubes analytical applications and models

@@ -13,15 +13,13 @@ Status: hidden
 			<th>Name</th>
 			<th>Description</th>
 			<th>Author</th>
-			<th>Link</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>Stiivi's wonderful model</td>
-			<td>An efflugent example of Cubes' inner workings</td>
-			<td>Stefan Urbanek</td>
-			<td><a href = "">Download</a></td>
+			<td><a href="https://github.com/Stiivi/cubes-examples/blob/master/procurements/vvo_model.json">Public Procurements of Slovakia</a></td>
+			<td>example model</td>
+			<td>Stiivi</td>
 		</tr>
 	</tbody>
 </table>

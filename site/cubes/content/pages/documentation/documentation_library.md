@@ -6,11 +6,21 @@ Type: half
 Parent: documentation
 Status: hidden
 
-## Library Documentation ##
+## Documentation ##
 
-Actual documentation can be found at the 
-python package index.
+[Current documentation](http://pythonhosted.org/cubes/) (v0.10.1)
 
-Download: [HTML (zipped)](http://example.com), [PDF](http://example.com), [epub](http://example.com)
+Quick links:
 
-Development version: [online](http://example.com)
+* [Installation](http://pythonhosted.org/cubes/install.html)
+* [Logical Model](http://pythonhosted.org/cubes/model.html)
+* [Schemas and Their Models](http://pythonhosted.org/cubes/schemas.html)
+* [OLAP Slicer Server](http://pythonhosted.org/cubes/server.html) and its
+  [Configuration](http://pythonhosted.org/cubes/server.html#configuration)
+* [slicer](http://pythonhosted.org/cubes/slicer.html) command line tool
+
+Download: [HTML
+(zipped)](http://cubes.databrewery.org/doc/Cubes-html-doc.zip),
+[PDF](http://cubes.databrewery.org/doc/Cubes.pdf),
+[epub](http://cubes.databrewery.org/doc/Cubes.epub)
+

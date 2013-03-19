@@ -11,25 +11,19 @@ Status: hidden
 	<thead>
 		<tr>
 			<th>Title</th>
-			<th>Type</th>
+			<th>Link(s)</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>Stiivi's wonderful presentation</td>
-			<td>Youtube video</td>
+			<td>Introduction – EuroPython 2012 Talk</td>
+			<td><a href="http://www.youtube.com/watch?v=WSHD029BAls">video (Youtube)</a>,
+			<a href="http://www.slideshare.net/Stiivi/cubes-lightweight-python-olap">slides (Slideshare)</a>
+            </td>
 		</tr>
 		<tr>
-			<td>Stiivi's wonderful presentation</td>
-			<td>Youtube video</td>
-		</tr>
-		<tr>
-			<td>Stiivi's wonderful presentation</td>
-			<td>Youtube video</td>
-		</tr>
-		<tr>
-			<td>Stiivi's wonderful presentation</td>
-			<td>Youtube video</td>
+			<td>Lightning talk – PyData 2012 NYC</td>
+			<td><a href="https://vimeo.com/53095895">video (Vimeo)</a></td>
 		</tr>
 	</tbody>
 </table>

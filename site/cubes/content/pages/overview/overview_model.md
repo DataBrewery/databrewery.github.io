@@ -2,7 +2,7 @@ Title: overview_model
 TextBox: box_model
 Row: 2
 Type: half
-Parent: overview
+Parent: index
 Status: hidden
 
 ## Model ##
@@ -14,4 +14,6 @@ business and analyst's point of view on data
 -   Dimension templates - define complex dimensions
 -   Localization of model and data
 
-[[Read more]](http://example.com)
+![](static/images/overview-model.png)
+
+[[Read more]](http://pythonhosted.org/cubes/model.html)

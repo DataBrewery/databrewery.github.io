@@ -4,7 +4,7 @@ Row: 3
 Column: 2
 Class: offset2
 Type: half
-Parent: overview
+Parent: index
 Status: hidden
 
 ## Backend and SQL ##

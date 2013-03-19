@@ -5,8 +5,15 @@ Type: half
 Parent: explore
 Status: hidden
 
-<h2>Cubes Viewer</h2>
-<p>[Screenshot Here]</p>
-<p>Author: <a href = "">Jose Montes</a></p>
-<p>Download: <a href = "http://github.com">GitHub</a></p>
+Cubes Viewer
+------------
+
+Author: [Jose Juan Montes](https://github.com/jjmontesl)
+
+A visual, web-based tool application for exploring and analyzing OLAP
+databases served by the Cubes OLAP Framework.
+
+Download: [sources at github](https://github.com/jjmontesl/cubesviewer)
+
+![](static/images/cubes-viewer.png)
 

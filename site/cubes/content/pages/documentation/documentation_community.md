@@ -1,14 +1,17 @@
 Title: documentation_community
 TextBox: box_community
-Class: offset2
-Row: 2
-Column: 2
+Row: 3
+Column: 1
 Type: half
 Parent: documentation
 Status: hidden
 
 ## Community ##
 
-Mailing list: cubes-discuss@googlegroups.com
+If you have any questions, suggestions or ideas, you can reach Cubes
+developers and users here:
+
+[Google Group](http://groups.google.com/group/cubes-discuss),
+[mailing list](mailto:cubes-discuss@googlegroups.com)
 
 IRC: #databrewery at freenode.net

@@ -4,7 +4,7 @@ Row: 2
 Column: 2
 Class: offset2
 Type: half
-Parent: overview
+Parent: index
 Status: hidden
 
 ## Aggregated Browsing ##
@@ -16,4 +16,6 @@ easy development of exploration tools
 -   Automatic next level selection, if desired
 -   Get dimension values or all facts within a cut
 
-[[Read more]](http://example.com)
+![](static/images/overview-browsing.png)
+
+[[Read more]](http://pythonhosted.org/cubes/aggregate.html)

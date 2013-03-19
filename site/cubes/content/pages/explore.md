@@ -6,4 +6,3 @@ Slug: explore
 Author: Andrej Sykora
 Summary: Documentation of Cubes, Python data-analysis framework
 
-...
