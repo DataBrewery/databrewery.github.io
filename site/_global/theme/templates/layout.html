@@ -15,6 +15,10 @@
 			<!-- LESS PROCEESSING -->
 			<script src = "{{ SITEURL }}/theme/js/vendor/less.min.js"></script>
 
+			<!-- PRETTIFY -->
+			<link rel = "stylesheet" href = "{{ SITEURL }}/theme/css/prettify.css">
+			<script src = "{{ SITEURL }}/theme/js/vendor/prettify/prettify.js"></script>
+
 	        {% if FEED_ALL_ATOM %}
 	        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
 	        {% endif %}
@@ -44,7 +48,7 @@
         {% endblock head %}
 	</head>
 
-	<body>
+	<body onload = "prettyPrint();">
 
 		<div class = "container {% block sitestyle %}info{% endblock %}">
 

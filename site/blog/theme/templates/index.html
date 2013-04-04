@@ -8,7 +8,7 @@
 
 					{% for article in articles_page.object_list %}
 						<article>
-							<span>
+							<span class = "info">
 								<i>{{ article.date }}</i><br>
 								by <strong>{{ article.author }}</strong>
 							</span>
@@ -17,6 +17,14 @@
 
 							{{ article.content }}
 
+							<div class = "social">
+								<h5>Share:</h5>
+								<a href = "http://facebook.com/sharer.php?u={{ SITEURL }}/{{ article.url }}" class = "facebook"></a>
+								<a href = "http://twitter.com/intent/tweet?url={{ SITEURL }}/{{ article.url }}" class = "twitter"></a>
+								<a href = "https://plus.google.com/share?url={{ SITEURL }}/{{ article.url }}" class = "google"></a>
+								<a href = "http://reddit.com/submit?url={{ SITEURL }}/{{ article.url }}" class = "reddit"></a>
+							</div>
+							
 						</article>
 					{% endfor %}
 

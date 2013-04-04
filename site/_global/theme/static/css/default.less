@@ -161,6 +161,30 @@ a:hover {color: @textHighlight;}
 			}
 		}
 
+		.testimonials {
+
+			text-align: justify;
+
+
+
+			p {
+				margin: 0 auto;
+				width: 80%;
+				border-left: 5px solid @textHighlight;
+				padding-left: 15px;
+			}
+
+			h3 {
+				display: block;
+				width: 80%;
+				margin: 0 auto;
+				text-align: right;
+				font-style: italic;
+				font-size: 0.9em;
+			}
+
+		}
+
 		
 		h2 {
 			font-weight: 300;
@@ -211,11 +235,51 @@ a:hover {color: @textHighlight;}
 			font-size: 1.3em;
 		}
 
-		span {
+		span.info {
+			margin: 0;
+			display: block;
 			font-weight: 300;
 			font-size: 0.8em;
 			float: right;
 			padding-top: 0px;
+		}
+
+		div.social {
+
+			margin-top: 20px;
+
+			h5{
+				margin: 0;
+				vertical-align: middle;
+				display: inline-block;
+				margin-right: 20px;
+				text-transform: uppercase;
+			}
+
+			a{	
+				vertical-align: middle;
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				margin-right: 5px;
+			}
+
+			a.google {
+				background-image: url('../img/sharing/google-plus.png');
+			}
+
+			a.facebook {
+				background-image: url('../img/sharing/facebook.png');
+			}
+
+			a.twitter {
+				background-image: url('../img/sharing/twitter.png');
+			}
+
+			a.reddit {
+				background-image: url('../img/sharing/reddit.png');
+			}
+
 		}
 
 	}
