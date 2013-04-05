@@ -1,20 +1,15 @@
 {% extends "layout.html" %}
 {% block sitestyle %}intro{% endblock %}
+{% block logo %}{% endblock logo %}
 {% block navigation %}{% endblock navigation %}
 {% block main %}
 
 <div class = "row">
-
 	<div class = "span12 header">
-
-		<img src = "{{SITEURL}}/static/images/logo_databrewery.png" alt = "Data Brewery logo" width = "500px">
-
 		<h1>Data Brewery</h1>
-
 		<p>
-			Data Brewery is a set of <a href = "http://python.org">Python</a> frameworks with tools for data analysis.
+			Data Brewery is a set of <a href = "http://python.org">Python</a> frameworks and tools for data processing and analysis.
 		</p>
-
 	</div>
 
 </div>
@@ -44,12 +39,9 @@
 		<img src = "{{SITEURL}}/static/images/logo_brewery.png" alt = "Brewery logo" width = "90%">
 
 		<p>
-			Flow based data processing with 
-			support for variety of data 
-			sources, data targets. Suitable for 
-			extraction, transformation and 
-			loading (ETL) as well as data 
-			auditing and data quality 
+			Flow based data processing with support for variety of data
+			sources, data targets. Suitable for extraction, transformation and
+			loading (ETL) as well as data auditing and data quality
 			monitoring.
 		</p>
 
