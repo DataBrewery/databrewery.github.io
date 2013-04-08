@@ -15,6 +15,8 @@ DISPLAY_PAGES_ON_MENU = False
 
 # PATHS
 
+ARTICLE_URL = 'posts/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{slug}.html'
 
 # URLS TO STATIC PAGES
 
