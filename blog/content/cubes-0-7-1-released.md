@@ -6,61 +6,66 @@ Slug: cubes-0-7-1-released
 Author: Stefan Urbanek
 Summary: Cubes 0.7.1 released
 
-<p>I am glad to announce new minor release of Cubes - Light Weight Python OLAP framework for multidimensional data aggregation and browsing. The news, changes and fixes are:</p>
+I am glad to announce new minor release of Cubes - Light Weight Python OLAP framework for multidimensional data aggregation and browsing. The news, changes and fixes are:
+    
+New Features
+------------
 
-<h2>New Features</h2>
+* New method: Dimension.attribute_reference: returns full reference to an attribute
+* str(cut) will now return constructed string representation of a cut as it can be used by Slicer
 
-<ul><li>New method: Dimension.attribute_reference: returns full reference to an attribute</li>
-<li>str(cut) will now return constructed string representation of a cut as it can be used by Slicer</li>
-</ul><p>Slicer server:</p>
+Slicer server:
 
-<ul><li>added /locales to slicer</li>
-<li>added locales key in /model request</li>
-<li>added Access-Control-Allow-Origin for JS/jQuery</li>
-</ul><h2>Changes</h2>
+* added /locales to slicer
+* added locales key in /model request
+* added Access-Control-Allow-Origin for JS/jQuery
 
-<ul><li>Allow dimensions in cube to be a list, noy only a dictionary (internally it is ordered dictionary)</li>
-<li>Allow cubes in model to be a list, noy only a dictionary (internally it is ordered dictionary)</li>
-</ul><p>Slicer server:</p>
+Changes
+-------
 
-<ul><li>slicer does not require default cube to be specified: if no cube is in the request then try default from
-config or get first from model</li>
-</ul><h2>Fixes</h2>
+* Allow dimensions in cube to be a list, noy only a dictionary (internally it is ordered dictionary)
+* Allow cubes in model to be a list, noy only a dictionary (internally it is ordered dictionary)
 
-<ul><li>Slicer not serves right localization regardless of what localization was used first after server was
-launched (changed model localization copy to be deepcopy (as it should be))</li>
-<li>Fixes some remnants that used old Cell.foo based browsing to Browser.foo(cell, &#8230;) only browsing </li>
-<li>fixed model localization issues; once localized, original locale was not available</li>
-<li>Do not try to add locale if not specified. Fixes #11: <a href="https://github.com/Stiivi/cubes/issues/11">https://github.com/Stiivi/cubes/issues/11</a></li>
-</ul><h2>Tutorials</h2>
+Slicer server:
 
-<p>Added tutorials in tutorials/ with models in tutorials/models/ and data in tutorials/data/:</p>
+* slicer does not require default cube to be specified: if no cube is in the request then try default from
+  config or get first from model
 
-<ul><li><a href="http://blog.databrewery.org/post/12966527920/cubes-tutorial-1-getting-started">Tutorial 1</a>: 
+Fixes
+-----
 
-<ul><li>how to build a model programatically</li>
-<li>how to create a model with flat dimensions</li>
-<li>how to aggregate whole cube</li>
-<li>how to drill-down and aggregate through a dimension</li>
-</ul></li>
-<li><a href="http://blog.databrewery.org/post/13255558153/cubes-tutorial-2-model-and-mappings">Tutorial 2</a>: 
+* Slicer not serves right localization regardless of what localization was used first after server was
+  launched (changed model localization copy to be deepcopy (as it should be))
+* Fixes some remnants that used old Cell.foo based browsing to Browser.foo(cell, ...) only browsing 
+* fixed model localization issues; once localized, original locale was not available
+* Do not try to add locale if not specified. Fixes #11: https://github.com/Stiivi/cubes/issues/11
 
-<ul><li>how to create and use a model file</li>
-<li>mappings</li>
-</ul></li>
-<li><a href="http://blog.databrewery.org/post/13457860520/how-to-hierarchies-levels-and-drilling-down">Tutorial 3</a>: 
+Tutorials
+---------
 
-<ul><li>how hierarhies work</li>
-<li>drill-down through a hierarchy</li>
-</ul></li>
-<li>Tutorial 4 (not blogged about it yet):
+Added tutorials in tutorials/ with models in tutorials/models/ and data in tutorials/data/:
 
-<ul><li>how to launch slicer server</li>
-</ul></li>
-</ul><h2>Links</h2>
+* [Tutorial 1](http://blog.databrewery.org/post/12966527920/cubes-tutorial-1-getting-started): 
+    * how to build a model programatically
+    * how to create a model with flat dimensions
+    * how to aggregate whole cube
+    * how to drill-down and aggregate through a dimension
+* [Tutorial 2](http://blog.databrewery.org/post/13255558153/cubes-tutorial-2-model-and-mappings): 
+    * how to create and use a model file
+    * mappings
+* [Tutorial 3](http://blog.databrewery.org/post/13457860520/how-to-hierarchies-levels-and-drilling-down): 
+    * how hierarhies work
+    * drill-down through a hierarchy
+* Tutorial 4 (not blogged about it yet):
+    * how to launch slicer server
 
-<ul><li>github  <strong>sources</strong>: <a href="https://github.com/Stiivi/cubes">https://github.com/Stiivi/cubes</a></li>
-<li><strong>Documentation</strong>: <a href="http://packages.python.org/cubes/">http://packages.python.org/cubes/</a></li>
-<li><strong>Mailing List</strong>: <a href="http://groups.google.com/group/cubes-discuss">http://groups.google.com/group/cubes-discuss</a></li>
-<li>Submit <strong>issues</strong> here: <a href="https://github.com/Stiivi/cubes/issues">https://github.com/Stiivi/cubes/issues</a></li>
-</ul><p>If you have any questions, comments, requests, do not hesitate to ask.</p>
+
+Links
+-----
+
+* github  **sources**: https://github.com/Stiivi/cubes
+* **Documentation**: http://packages.python.org/cubes/
+* **Mailing List**: http://groups.google.com/group/cubes-discuss
+* Submit **issues** here: https://github.com/Stiivi/cubes/issues
+
+If you have any questions, comments, requests, do not hesitate to ask.

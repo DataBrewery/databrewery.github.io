@@ -6,45 +6,55 @@ Slug: cubes-0-8-released
 Author: Stefan Urbanek
 Summary: Cubes 0.8 Released
 
-<p>Another minor release of Cubes - Light Weight Python OLAP framework is out. Main change is that backend is no longer hard-wired in the <a href="http://packages.python.org/cubes/server.html">Slicer server</a> and can be selected through configuration file.</p>
+Another minor release of Cubes - Light Weight Python OLAP framework is out. Main change is that backend is no longer hard-wired in the [Slicer server](http://packages.python.org/cubes/server.html) and can be selected through configuration file.
 
-<p>There were lots of documentation changes, for example <a href="http://packages.python.org/cubes/api/index.html">the reference</a> was separated from the rest of docs. <a href="https://github.com/Stiivi/cubes/tree/master/examples/hello_world">Hello World! example</a> was added.</p>
+There were lots of documentation changes, for example [the reference](http://packages.python.org/cubes/api/index.html) was separated from the rest of docs. [Hello World! example](https://github.com/Stiivi/cubes/tree/master/examples/hello_world) was added.
 
-<p>The news, changes and fixes are:</p>
+The news, changes and fixes are:
 
-<h2>New Features</h2>
+New Features
+------------
 
-<ul><li>Started writing <a href="https://github.com/Stiivi/cubes/blob/master/cubes/backends/sql/star_browser.py">StarBrowser</a> - another SQL aggregation browser with different 
-approach (see code/docs)</li>
-</ul><p><a href="http://packages.python.org/cubes/server.html#configuration">Slicer Server</a>:</p>
+* Started writing [StarBrowser](https://github.com/Stiivi/cubes/blob/master/cubes/backends/sql/star_browser.py) - another SQL aggregation browser with different 
+  approach (see code/docs)
 
-<ul><li>added configuration option <code>modules</code> under <code>[server]</code> to load additional 
-modules</li>
-<li>added ability to specify backend module</li>
-<li>backend configuration is in [backend] by default, for SQL it stays in [db]</li>
-<li>added server config option for default <code>prettyprint</code> value (useful for 
-demontration purposes)</li>
-</ul><p><a href="http://packages.python.org/cubes">Documentation</a>:</p>
+[Slicer Server](http://packages.python.org/cubes/server.html#configuration):
 
-<ul><li><a href="http://blog.databrewery.org/post/18142294411">Changed license</a> to MIT + small addition. Please refer to the LICENSE file.</li>
-<li>Updated documentation - added missing parts, made reference more readable, 
-moved class and function reference docs from descriptive part to reference 
-(API) part.</li>
-<li>added backend documentation </li>
-<li>Added &#8220;<a href="https://github.com/Stiivi/cubes/tree/master/examples/hello_world">Hello World!</a>&#8221; example</li>
-</ul><h2>Changed Features</h2>
+* added configuration option `modules` under `[server]` to load additional 
+  modules
+* added ability to specify backend module
+* backend configuration is in [backend] by default, for SQL it stays in [db]
+* added server config option for default `prettyprint` value (useful for 
+  demontration purposes)
 
-<ul><li>removed default SQL backend from the server</li>
-<li>moved worskpace creation into the backend module</li>
-</ul><h2>Fixes</h2>
+[Documentation](http://packages.python.org/cubes):
 
-<ul><li>Fixed create_view to handle not materialized properly (thanks to deytao)</li>
-<li>Slicer tool header now contains #!/usr/bin/env python</li>
-</ul><h2>Links</h2>
+* [Changed license](http://blog.databrewery.org/post/18142294411) to MIT + small addition. Please refer to the LICENSE file.
+* Updated documentation - added missing parts, made reference more readable, 
+  moved class and function reference docs from descriptive part to reference 
+  (API) part.
+* added backend documentation 
+* Added "[Hello World!](https://github.com/Stiivi/cubes/tree/master/examples/hello_world)" example
 
-<ul><li>github  <strong>sources</strong>: <a href="https://github.com/Stiivi/cubes">https://github.com/Stiivi/cubes</a></li>
-<li><strong>Documentation</strong>: <a href="http://packages.python.org/cubes/">http://packages.python.org/cubes/</a></li>
-<li><strong>Mailing List</strong>: <a href="http://groups.google.com/group/cubes-discuss">http://groups.google.com/group/cubes-discuss</a></li>
-<li>Submit <strong>issues</strong> here: <a href="https://github.com/Stiivi/cubes/issues">https://github.com/Stiivi/cubes/issues</a></li>
-<li>IRC channel: <a href="irc://irc.freenode.net/#databrewery">#databrewery</a> on irc.freenode.net</li>
-</ul><p>If you have any questions, comments, requests, do not hesitate to ask.</p>
+Changed Features
+----------------
+
+* removed default SQL backend from the server
+* moved worskpace creation into the backend module
+
+Fixes
+-----
+
+* Fixed create_view to handle not materialized properly (thanks to deytao)
+* Slicer tool header now contains #!/usr/bin/env python
+
+Links
+-----
+
+* github  **sources**: https://github.com/Stiivi/cubes
+* **Documentation**: http://packages.python.org/cubes/
+* **Mailing List**: http://groups.google.com/group/cubes-discuss
+* Submit **issues** here: https://github.com/Stiivi/cubes/issues
+* IRC channel: [#databrewery](irc://irc.freenode.net/#databrewery) on irc.freenode.net
+
+If you have any questions, comments, requests, do not hesitate to ask.
