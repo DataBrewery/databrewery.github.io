@@ -25,8 +25,10 @@ body {
 
 }
 
-a {text-decoration: none; color: @textHighlight;}
+a {text-decoration: none; color: #769131;}
 a:hover {color: @textHighlight;}
+
+code {color: black}
 
 // ========= FOOTER ===============
 
@@ -214,9 +216,11 @@ a:hover {color: @textHighlight;}
 	article {
 
 		margin-bottom: 40px;
-		font-size: 0.9em;
+		font-size: 14px;
+		line-height: 125%;
 
 		h1 {
+			font-size: 24px;
 			font-weight: 300;
 			margin-bottom: 20px;
 			width: 530px;
@@ -231,16 +235,18 @@ a:hover {color: @textHighlight;}
 			}
 		}
 
-		h2 {
-			font-size: 1.3em;
+		h1.title {
+			font-size: 36px;
 		}
 
-		span.info {
+		h2 {
+			font-size: 14px;
+		}
+
+		.info {
 			margin: 0;
-			display: block;
 			font-weight: 300;
-			font-size: 0.8em;
-			float: right;
+			font-size: 12px;
 			padding-top: 0px;
 		}
 

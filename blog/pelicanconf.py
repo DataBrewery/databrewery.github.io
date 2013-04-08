@@ -18,6 +18,8 @@ DISPLAY_PAGES_ON_MENU = False
 ARTICLE_URL = 'posts/{slug}.html'
 ARTICLE_SAVE_AS = 'posts/{slug}.html'
 
+DEFAULT_DATE_FORMAT = '%a %d %B %Y'
+
 # URLS TO STATIC PAGES
 
 AUTHOR_SAVE_AS = False
