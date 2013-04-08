@@ -33,15 +33,15 @@ CATEGORIES_SAVE_AS = False
 
 # THEME
 
-THEME = '../_global/theme'
+THEME = '../_theme'
 THEME_STATIC_PATHS = ['static']
 EXTRA_TEMPLATES_PATHS=['theme/templates']
 
 # OUTPUT
 
-OUTPUT_PATH = '../../prod/cubes/'
+OUTPUT_PATH = '../_build/cubes/'
 
-PLUGIN_PATH = '../plugins'
+PLUGIN_PATH = '../_plugins'
 PLUGINS = ['textbox']
 sys.path.insert(0, PLUGIN_PATH)
 
