@@ -22,7 +22,7 @@ build: $(PROJECTS) home
 
 publish: build rsync
 
-$(PROJECTS):
+$(PROJECTS) home:
 	@echo Creating $(MSG)content for $@... ; \
 	cd $@ ; \
 	pelican content -s $(CONFIG)
