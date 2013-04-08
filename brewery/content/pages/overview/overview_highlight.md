@@ -3,7 +3,9 @@ TextBox: box_highlight
 Row: 1
 Type: full
 Class: highlight
-Parent: overview
+Parent: index
 Status: hidden
 
-Flow based data processing with support for variety of data sources, data targets. Suitable for extraction, transformation and loading (ETL) as well as data auditing and data quality monitoring.
+Flow based data processing with support for variety of data sources, data targets.
+
+<p><small><em>Note: Current Brewery implementation is no longer actively maintained. More information about new concepts is coming soon.</em></small></p>

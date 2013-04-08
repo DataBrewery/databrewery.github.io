@@ -3,7 +3,7 @@
 import sys
 
 AUTHOR = u'Andrej Sýkora'
-SITENAME = u'Blog | Data Brewery'
+SITENAME = u'Data Brewery Blog'
 SITEURL = ''
 
 TIMEZONE = 'Europe/Paris'
@@ -52,4 +52,4 @@ SOCIAL = False
 #PLUGIN_PATH = '../plugins'
 #PLUGINS = ['textbox']
 #sys.path.insert(0, PLUGIN_PATH)
-
+FEED_ATOM = 'feeds/atom'

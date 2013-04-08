@@ -9,6 +9,10 @@ Status: hidden
 
 ## Community ##
 
-Mailing list: cubes-discuss@googlegroups.com
+If you have any questions, suggestions or ideas, you can reach Cubes
+developers and users here:
+
+[Google Group](http://groups.google.com/group/databrewery),
+[mailing list](mailto:databrewery@googlegroups.com)
 
 IRC: #databrewery at freenode.net

@@ -5,14 +5,15 @@ Type: half
 Parent: documentation
 Status: hidden
 
-## Library Documentation ##
+## Documentation ##
 
-Actual documentation can be found at the python package index.
+[Current documentation](http://pythonhosted.org/brewery) (v0.8.0)
 
-Download: [HTML (zipped)](http://example.com), [PDF](http://example.com), [epub](http://example.com)
+**Note:** Current Brewery implementation is no longer actively maintained. More information about new concepts is coming soon.
 
-Development version: [online](http://example.com)
+Quick links:
 
-Data Object reference
-
-Nodes reference
+* [Installation](http://pythonhosted.org/brewery/install.html)
+* [Metadata](http://pythonhosted.org/brewery/metadata.html)
+* [Node Reference](http://pythonhosted.org/brewery/node_reference.html)
+* [`brewery`](http://pythonhosted.org/brewery/tools.html) command line tool
