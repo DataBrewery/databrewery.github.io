@@ -11,6 +11,7 @@ CONF_PUBLISH := publishconf.py
 
 ALL_TARGETS := $(PROJECTS) $(HOME)
 PUBLISH_TARGETS := $(addprefix publish_, $(PROJECTS))
+CONFIG := $(CONF_LOCAL)
 
 .PHONY: all $(PROJECTS) $(HOME)
 
@@ -24,7 +25,7 @@ publish: build rsync
 $(PROJECTS):
 	@echo Creating $(MSG)content for $@... ; \
 	cd $@ ; \
-	pelican content -s pelicanconf.py
+	pelican content -s $(CONFIG)
 
 rsync: check-publish-target
 	@echo Publishing... ; \
