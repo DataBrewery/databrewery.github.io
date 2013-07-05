@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block logo %}
+	<a href = "{{ SITEURL }}/index.html">
+		<img src = "{{ SITEURL }}/theme/img/logo_bubbles.png" width = "200px">
+	</a>
+{% endblock logo %}
+
+{% block menu %}
+	<li><a href = "{{ SITEURL }}/index.html">Overview</a></li>
+	<li><a href = "{{ SITEURL }}/documentation.html">Documentation &amp; Support</a></li>
+	<li><a href = "https://github.com/stiivi/bubbles">Download</a></li>
+{% endblock menu %}
