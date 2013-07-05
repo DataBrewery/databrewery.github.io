@@ -1,4 +1,4 @@
-PROJECTS := cubes brewery blog
+PROJECTS := cubes brewery bubbles blog
 HOME := home
 BUILD_PATH := _build
 

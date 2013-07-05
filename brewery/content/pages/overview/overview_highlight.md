@@ -6,6 +6,8 @@ Class: highlight
 Parent: index
 Status: hidden
 
-Flow based data processing with support for variety of data sources, data targets.
+Flow based data processing with support for variety of data sources, data
+targets.
 
-<p><small><em>Note: Current Brewery implementation is no longer actively maintained. More information about new concepts is coming soon.</em></small></p>
+<p><em>Brewery was replaced by
+<a href="http://bubbles.databrewery.org">Bubbles</a></em></p>
