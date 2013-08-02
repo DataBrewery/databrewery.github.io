@@ -55,6 +55,7 @@ FEED_DOMAIN = "http://databrewery.org"
 
 # CUSTOM
 
+ROOT_BUBBLES = "http://bubbles.databrewery.org"
 ROOT_CUBES = "http://cubes.databrewery.org"
 ROOT_BREWERY = "http://brewery.databrewery.org"
 ROOT_BLOG = "http://blog.databrewery.org"
