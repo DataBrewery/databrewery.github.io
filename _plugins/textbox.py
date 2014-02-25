@@ -12,7 +12,7 @@ def generate_textboxes(generator):
             box = int(float(page.metadata["column"])) - 1
         else:
             box = 0
-            
+
         row = int(float(page.metadata["row"]))
         parent = page.metadata["parent"]
         if row not in boxes[parent]:
@@ -28,5 +28,5 @@ def generate_textboxes(generator):
         page.metadata["textboxes"] = textboxes
 
 def register():
-    signals.pages_generator_finalized.connect(generate_textboxes)
+    signals.page_generator_finalized.connect(generate_textboxes)
 
