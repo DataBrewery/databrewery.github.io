@@ -10,6 +10,9 @@ Status: hidden
 
 [Current documentation](http://pythonhosted.org/cubes/) (v0.10.1)
 
+[Development documentation](http://cubes.databrewery.org/dev/doc/) (v1.0alpha,
+[release notes](http://cubes.databrewery.org/dev/doc/releases/1.0.html))
+
 Quick links:
 
 * [Installation](http://pythonhosted.org/cubes/install.html)
