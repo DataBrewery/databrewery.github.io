@@ -8,6 +8,10 @@ Summary: Cubes Tutorial 1 - Getting started
 
 <p>In this tutorial you are going to learn how to start with cubes. The example shows:</p>
 
+<p><em>This tutorial is obsolete, please refer to the actual
+<a href="http://cubes.databrewery.org">cubes documentation</a> for more
+information.</em></p>
+
 <ul><li>how to build a model programatically</li>
 <li>how to create a model with flat dimensions</li>
 <li>how to aggregate whole cube</li>

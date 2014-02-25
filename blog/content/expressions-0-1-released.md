@@ -1,10 +1,10 @@
-Title: Introducing Expressions 0.1 for Python
+Title: Introducing Expressions for Python
 Date: 2013-08-02
 Tags: announcement, release, expressions
 Category: announcement
 Slug: python-expressions-0-1-released
 Author: Stefan Urbanek
-Summary: Expressions 0.1 for Python Released
+Summary: Expressions for Python Released
 
 Expressions is a lightweight arithmetic expression parser for creating simple
 arithmetic expression compilers.

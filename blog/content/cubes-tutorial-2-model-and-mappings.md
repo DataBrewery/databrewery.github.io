@@ -62,12 +62,13 @@ level.</p>
 <pre class="prettyprint">
 {
     "dimensions": [...],
-    "cubes": {
-        "irbd_balance": {
+    "cubes": [
+        {
+            "name": "irbd_balance",
             "dimensions": ["item", "year"],
             "measures": ["amount"]
         }
-    }
+    ]
 }
 </pre>
 
@@ -112,14 +113,15 @@ where keys are dimension attribute names and values are physical table column na
 <pre class="prettyprint">
 {
     ...
-    "cubes": {
-        "irbd_balance": {
+    "cubes": [
+        {
+            "name":"irbd_balance",
             ...
             "mappings": { "item.line_item": "line_item",
                           "item.subcategory": "subcategory",
                           "item.category": "category" }
         }
-    }
+    ]
 }
 </pre>
 
@@ -136,14 +138,16 @@ implementation of the SQL backend.</p>
         },
         {"name":"year"}
     ],
-    "cubes": {
-        "irbd_balance": {
+    "cubes": [
+        {
+            "name":"irbd_balance",
             "dimensions": ["item", "year"],
             "measures": ["amount"],
             "mappings": { "item.line_item": "line_item",
                           "item.subcategory": "subcategory",
                           "item.category": "category" }
         }
+        ]
     }
 }
 </pre>
@@ -186,8 +190,9 @@ repository</a>.</p>
 <p>Load the model, get the cube and specify where cube&#8217;s source data comes from:</p>
 
 <pre class="prettyprint">
-model = cubes.load_model("models/model_02.json")
-cube = model.cube("irbd_balance")
+workspace = cubes.Workspace()
+workspace.import_model("models/model_02.json")
+cube = workspace.cube("irbd_balance")
 cube.fact = FACT_TABLE
 </pre>
 
@@ -206,7 +211,7 @@ dn.create_view(FACT_VIEW)
 <pre class="prettyprint">
 browser = cubes.backends.sql.SQLBrowser(cube, connection, view_name = FACT_VIEW)
 
-cell = browser.full_cube()
+cell = cubes.Cell(cube)
 result = browser.aggregate(cell)
 
 print "Record count: %d" % result.summary["record_count"]
