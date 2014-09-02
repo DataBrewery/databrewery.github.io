@@ -8,9 +8,9 @@ Status: hidden
 
 ## Documentation ##
 
-[Current documentation](http://pythonhosted.org/cubes/) (v0.10.1)
+[Current documentation](http://pythonhosted.org/cubes/) (v1.0beta)
 
-[Development documentation](http://cubes.databrewery.org/dev/doc/) (v1.0alpha,
+[Development documentation](http://cubes.databrewery.org/dev/doc/) (
 [release notes](http://cubes.databrewery.org/dev/doc/releases/1.0.html))
 
 Quick links:
@@ -21,9 +21,4 @@ Quick links:
 * [OLAP Slicer Server](http://pythonhosted.org/cubes/server.html) and its
   [Configuration](http://pythonhosted.org/cubes/server.html#configuration)
 * [slicer](http://pythonhosted.org/cubes/slicer.html) command line tool
-
-Download: [HTML
-(zipped)](http://cubes.databrewery.org/doc/Cubes-html-doc.zip),
-[PDF](http://cubes.databrewery.org/doc/Cubes.pdf),
-[epub](http://cubes.databrewery.org/doc/Cubes.epub)
 

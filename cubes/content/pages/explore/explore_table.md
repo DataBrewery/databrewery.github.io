@@ -17,7 +17,7 @@ Status: hidden
 	</thead>
 	<tbody>
 		<tr>
-			<td><a href="https://github.com/Stiivi/cubes-examples/blob/master/procurements/vvo_model.json">Public Procurements of Slovakia</a></td>
+			<td><a href="https://github.com/DataBrewery/cubes-examples/blob/master/procurements/vvo_model.json">Public Procurements of Slovakia</a></td>
 			<td>example model</td>
 			<td>Stiivi</td>
 		</tr>
